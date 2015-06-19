@@ -1,0 +1,119 @@
+<script id="application-template" type="text/html">   
+    {{#lang.VidyoClient}}
+    <div id="application">
+        <div id="detail">
+            <!-- Content inserted by JavaScript -->
+        </div>
+        <div id="modcontroller_header" data-role="header">
+            <div id='modcontroller'> 
+                <div class="gb-logo">
+                </div>
+                <label id="label_company">{{BANNER}} - </label>
+                <div id="inConference"></div>
+                <div id="help_main" data-form="ui-btn-left" data-role="button" title="{{HELP_TOOLTIP}}">
+                    <ul id="help_main_submenu" data-role="listview" class="ui-listview" style="display:none;">
+                        <li type="list" class="help_menu_element clickable_item ui-li-static ui-body-inherit ui-first-child help_menu_element_noborder">{{HELP}}</li>
+                        <li type="list" class="help_menu_element clickable_item ui-li-static ui-body-inherit ui-first-child help_menu_element_with_border">{{ABOUT}}</li>
+                    </ul> 
+                </div>
+                <div id="endConf" data-form="ui-btn-up-c" data-role="button" title="{{END_CONFERENCE_TOOLTIP}}"></div>
+                <div id="lockRoom" data-form="ui-btn-up-c" data-role="button" title="{{LOCK_ROOM_TOOLTIP}}"></div>
+            </div>
+        </div>
+        <div id="inCallContainer" style="width: auto; height: auto; padding: 20px;">
+            <div id="inCallParticipantsPanel" class="hide well">
+                <div id='sidebar_menu' class="ui-content ui-body-c" data-theme="a" data-form="ui-body-c" data-role="content" >
+                    <ul id="menu_items">
+                        <li id="participants_menu" data-theme="a" data-form="ui-btn-up-c" data-role="button"><a href='#' title="{{PARTICIPANTS}}">
+                                <!-- <div class="side_bar_text">{{PARTICIPANTS}}</div> -->
+                            </a>
+                            <div id="participant_counter_badge"><span id="participant_counter"></span></div>
+                        </li>
+                        <li id="share_menu"  data-theme="a" data-form="ui-btn-up-c" data-role="button"><a href='#' title="{{SHARE}}">
+                                <!-- <div class="side_bar_text">{{SHARE}}</div> -->
+                            </a></li>
+                        {{^data.shareOnly}}
+                        <li id="selfview_menu"  data-theme="a" data-form="ui-btn-up-c" data-role="button" title="{{ACTIVATE_SELF_VIEW}}"><a href='#'>
+                                <!-- <div class="side_bar_text">{{SELF_VIEW}}</div> -->
+                            </a></li>
+                        <li id="layout_menu"  data-theme="a" data-form="ui-btn-up-c" data-role="button" title="{{ACTIVATE_LAYOUT_GRID}}"><a href='#' >
+                                <!-- <div class="side_bar_text">{{LAYOUT}}</div> -->
+                            </a></li>
+                        {{/data.shareOnly}}
+                        <li id="moderator_menu"  data-theme="a" data-form="ui-btn-up-c" data-role="button"><a href='#' title="{{MODERATOR_CONTROLS}}">
+                                <!-- <div class="side_bar_text">{{MODERATOR}}</div> -->
+                            </a></li>
+                        {{^data.shareOnly}}
+                        <li id="settings_menu" data-theme="a" data-form="ui-btn-up-c" data-role="button"><a href='#' title="{{SETTINGS}}">
+                                <!-- <div class="side_bar_text">{{SETTINGS}}</div> -->
+                            </a></li>
+                        {{/data.shareOnly}}
+
+                    </ul>
+                </div>
+                <div id="sidebarContent" unselectable="on" class="noselect">    
+                </div>
+            </div>
+            <!-- Plugin wrapper -->
+            <div id="pluginAndChatContainer" class="pull-right" style="width: auto; height: auto; min-width: 655px; min-height: 300px;">
+                <div id="vidyo_plugin_container" class="off">
+                    <!-- Will autogenerate plugin tag -->
+                    <br/>
+                </div>
+                <div id="chat_container" class="ui-responsive-panel cd-panel from-right">
+                    <div id="create-new-tabs" data-role="tabs">
+                        <div id="group-chat" class="tab" aria-selected="true">
+                            <div class="messages_container cd-panel-container">
+                                <div class="cd-panel-content"></div> 
+                            </div> 
+                        </div>
+                    </div>
+                    <div id="message-input-area" class="ui-grid-a">
+                        <div class="ui-block-b" style="display:inline-flex; height: 48px; width:100%; position: relative;">
+                            <textarea type="text" id="vidyo-message-input"  placeholder="{{CHAT_MESSAGE}}" maxlength="1024"></textarea>
+                            <div id="send-message-btn">
+                                <a href="#" class="ui-btn"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Plugin wrapper  -->
+                <div id="conference_settings" class="hide">
+                    <div id="disconnected_btn" title="{{EXIT_CONFERENCE_TOOLTIP}}">
+                        <a href="#" class="ui-btn"></a>
+                    </div>
+                    <div id="timer_btn">
+
+                        <label class="label" >1:34:56</label>
+                    </div>
+                    {{^data.shareOnly}}
+                    <div id="microphone_mute_btn">
+                        <a href="#" class="ui-btn"></a>
+                    </div> 
+                    <div id="speaker_mute_btn">
+                        <a href="#" class="ui-btn"></a>
+                    </div>
+                    <div id="camera_mute_btn">
+                        <a href="#" class="ui-btn"></a>
+                    </div>              
+                    {{/data.shareOnly}}
+                    <div id="chat_toggle_btn">
+                        <a href="#" class="ui-btn"></a>
+                        <div id="chat_warning_icon">
+                            <span class="warning"></span>
+                        </div>
+                    </div>
+                    <div id="fullscreen_btn" title="{{FULL_SCREEN}}">
+                        <a href="#" class="ui-btn"></a>
+                    </div>
+                </div>
+                <!-- Chat container -->
+                <!-- End chat container -->
+            </div>
+        </div>
+    </div> 
+</div>
+{{/lang.VidyoClient}}
+
+</script>
+

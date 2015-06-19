@@ -1,0 +1,43 @@
+<script id="error-template" type="text/html">
+    {{#lang.VidyoClient}}
+
+    <div id="application">
+        <div id="inCallContainer" style="width: auto; height: auto; padding: 20px;">
+            <div id="inCallParticipantsPanel" class="hide well">
+                <div id='sidebar_menu' class="ui-content ui-body-c" data-theme="a" data-form="ui-body-c" data-role="content" >
+                    <ul id="menu_items">
+                        <li id="participants_menu" data-theme="a" data-form="ui-btn-up-c" data-role="button"><a href='#' title="{{PARTICIPANTS}}">
+                                <!-- <div class="side_bar_text">{{PARTICIPANTS}}</div> -->
+                            </a>
+                            <div id="participant_counter_badge"><span id="participant_counter"></span></div>
+                        </li>
+                        <li id="share_menu"  data-theme="a" data-form="ui-btn-up-c" data-role="button"><a href='#' title="{{SHARE}}">
+                                <!-- <div class="side_bar_text">{{SHARE}}</div> -->
+                            </a></li>
+                 
+                        <li id="selfview_menu"  data-theme="a" data-form="ui-btn-up-c" data-role="button" title="{{ACTIVATE_SELF_VIEW}}"><a href='#'>
+                                <!-- <div class="side_bar_text">{{SELF_VIEW}}</div> -->
+                            </a></li>
+                        <li id="layout_menu"  data-theme="a" data-form="ui-btn-up-c" data-role="button" title="{{ACTIVATE_LAYOUT_GRID}}"><a href='#' >
+                                <!-- <div class="side_bar_text">{{LAYOUT}}</div> -->
+                            </a></li>
+                
+                        <li id="moderator_menu"  data-theme="a" data-form="ui-btn-up-c" data-role="button"><a href='#' title="{{MODERATOR_CONTROLS}}">
+                                <!-- <div class="side_bar_text">{{MODERATOR}}</div> -->
+                            </a></li>
+                   
+                        <li id="settings_menu" data-theme="a" data-form="ui-btn-up-c" data-role="button"><a href='#' title="{{SETTINGS}}">
+                                <!-- <div class="side_bar_text">{{SETTINGS}}</div> -->
+                            </a></li>
+                       
+
+                    </ul>
+                </div>
+                <div id="sidebarContent" unselectable="on" class="noselect">    
+                </div>
+            </div>
+        </div>
+    </div> 
+{{/lang.VidyoClient}}
+</script>
+

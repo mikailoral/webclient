@@ -1,0 +1,45 @@
+<script id="moderator_controls_template" type="text/html">
+    {{#lang.VidyoClient}}
+    <div id="moderator_controls">
+        <div id="moderator_controls_label" unselectable="on" class="mc_text mc_label noselect">{{MODERATOR_CONTROLS_LABEL}}</div>  
+        {{#data.isLocked}}
+        <div id="unlock_room" unselectable="on" class="mc_text mc_operation mc_vertical_margin mc_hoverable noselect">{{UNLOCK_ROOM}}</div>
+        {{/data.isLocked}}
+        {{^data.isLocked}}
+        <div id="lock_room" unselectable="on" class="mc_text mc_operation mc_vertical_margin mc_hoverable noselect">{{LOCK_ROOM}}</div>
+        {{/data.isLocked}}
+        <div id="end_conference" unselectable="on" class="mc_text mc_operation mc_hoverable noselect">{{END_CONFERENCE}}</div>
+        {{^data.shareOnly}}
+        <hr class="margins_for_hr">
+        {{#data.mediaInfo}}
+        {{#audio}} 
+        <div id="unmute_conference_audio" unselectable="on" class="mc_text mc_operation mc_hoverable noselect">{{UNMUTE_CONFERENCE_AUDIO}}</div>
+        {{/audio}}
+        {{^audio}}
+        <div id="mute_conference_audio" unselectable="on" class="mc_text mc_operation mc_vertical_margin mc_hoverable noselect">{{MUTE_CONFERENCE_AUDIO}}</div>
+        {{^animateSilenceAudio}}
+        <div id="silence_conference_audio" unselectable="on" class="mc_text mc_operation mc_hoverable noselect">{{SILENCE_PARTICIPANTS_AUDIO}}</div>
+        {{/animateSilenceAudio}}
+        {{#animateSilenceAudio}}
+        <div id="silence_conference_audio_animation" unselectable="on" class="mc_text noselect mc_animation">{{SILENCE_PARTICIPANTS_AUDIO}}</div>
+        {{/animateSilenceAudio}}
+        {{/audio}}
+        <hr class="margins_for_hr">
+        {{#video}} 
+        <div id="unmute_conference_video" unselectable="on" class="mc_text mc_operation mc_hoverable noselect">{{UNMUTE_CONFERENCE_VIDEO}}</div>
+        {{/video}}
+        {{^video}}
+        <div id="mute_conference_video" unselectable="on" class="mc_text mc_operation mc_vertical_margin mc_hoverable noselect">{{MUTE_CONFERENCE_VIDEO}}</div>
+        {{^animateSilenceVideo}}
+        <div id="silence_conference_video" unselectable="on" class="mc_text mc_operation mc_hoverable noselect">{{SILENCE_PARTICIPANTS_VIDEO}}</div>
+        {{/animateSilenceVideo}}
+        {{#animateSilenceVideo}}
+        <div id="silence_conference_video_animation" unselectable="on" class="mc_text noselect mc_animation">{{SILENCE_PARTICIPANTS_VIDEO}}</div>
+        {{/animateSilenceVideo}}
+        {{/video}}
+        {{/data.mediaInfo}}
+        {{/data.shareOnly}}
+    </div>       
+    {{/lang.VidyoClient}} 
+
+</script>

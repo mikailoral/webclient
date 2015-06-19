@@ -1,0 +1,70 @@
+ <script id="login_template" type="text/html">
+{{#lang.VidyoClient}}
+<div id="login_header" data-role="header">
+    <div class="gb-logo">
+    </div>
+    <label id="logo_label">{{BANNER}}</label>
+     <div id="help_login" data-form="ui-btn-left" data-role="button"  title="{{HELP_TOOLTIP}}">
+           <ul id="help_login_submenu" data-role="listview" style="display:none;">
+                          <li type="list" class="help_menu_element clickable_item help_menu_element_noborder">{{HELP}}</li>
+                          <li type="list" class="help_menu_element clickable_item help_menu_element_with_border">{{ABOUT}}</li>
+           </ul> 
+     </div>
+</div>
+<div id="login_area" class="noselect">
+<div id="browser_warning" class="warning">
+<h3>{{WARNING}}</h3>
+<img id="close_warning_section" src="images/x_icon.png"/>
+<span>{{SUPPORTED_BROWSER_LIST}}</span>
+</div>
+<div id="enter_room_details">
+<div id="login_title"> 
+<h4>{{LOGIN_TITLE}}</h4>
+</div>
+<div class="ml_c_body1 ml_padding1">
+<div class="ml_padding_left2 ml_padding_top1">
+<div data-role="tabs" id="sign_in_tab">
+<div data-role="navbar" id="sign_in_navbar">
+<ul>
+<li><a href="#guest" data-ajax="false">{{GUEST}}</a></li>
+<li><a href="#moderator" data-ajax="false">{{MODERATOR}}</a></li>
+</ul>
+</div>
+<div id="moderator" class="ui-body-d ui-content">
+<input type="email" name="username" id="login_username" placeholder="{{USERNAME}}"></input>
+<img id="clear_username" style="display:none" src="images/x_icon.png" alt="">
+<input type="password" data-clear-btn="false" name="password" placeholder="{{PASSWORD}}" id="password" autocomplete="off"></input>
+<img id="clear_password" style="display:none" src="images/x_icon.png" alt="">
+</div>
+<div id="guest">
+<input type="text" name="nickname" id="login_nickname" placeholder="{{NAME}}"></input>
+<img id="clear_nickname" style="display:none" src="images/x_icon.png" alt="">
+</div>
+</div>
+<div class="ml_padding_top3">
+<a id="enter_room" data-role="button" data-inline="true" title="{{ENTER_ROOM}}"><img src="images/login_icon.png" style="width:25px; height:25px; border:0px;  margin-right: 9px;margin-bottom: -8px;  margin-top: -4px;">{{ENTER_ROOM}}</a>
+</div>
+<div class="ml_padding_top2">
+<input type='checkbox' id="rememberMe" name="rememberMe-1"> 
+<label class='checkbox'>{{REMEMBER_ME}}</label>
+</div>
+<div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-content-theme="false">
+<h4>{{ADVANCED_SETTINGS_TITLE}}</h4>
+<div class="advance_settings">
+<input type='checkbox' id="proxy_setting" name="proxy-1"> 
+<label class='proxy'>{{PROXY_SETTING_LABEL}}</label>
+</div>
+<!-- <div class="advance_settings">
+<input type='checkbox' id="web_proxy_setting" name="proxy-2" style="display: table-cell"> 
+<label class='proxy'>{{WEB_PROXY_SETTING_LABEL}}</label>
+</div> -->
+</div>
+<div id="information_area">
+    <div id="warning_icon"> </div><label id="vidyo_status_label" class="vidyo_status_control_item"></label>
+</div>
+</div> 
+</div>
+</div> 
+</div>
+{{/lang.VidyoClient}}
+</script>

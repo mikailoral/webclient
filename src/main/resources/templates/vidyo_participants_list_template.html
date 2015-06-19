@@ -1,0 +1,57 @@
+<script id="vidyo_participants_list_template" type="text/html">
+{{#lang.VidyoClient}} 
+
+<!-- <p id="span_participant_count">{{PARTICIPANTS}}: {{#data.participantCount}}{{count}}{{/data.participantCount}} <p/> -->
+
+<!--list can be shown rounded by adding ui-corner-all to any class-->
+<ul id="inCallParticipantsList" class="nav nav-list">
+{{#data.participants}} 
+<li class="participants_area isme_{{isMe}}" participantID="{{participantID}}">
+    <div class="ui-grid-b">
+        <!--if user is guest only show displayname -->
+        {{^data.isGuest}}
+            {{^isMe}}                
+                <div id="mod_participant_kick_btn" title="{{KICK_PARTICIPANT}}" participantID="{{participantID}}"/>          
+                <div id="mod_participant_contactName" title="{{displayName}}" class="ui-block-a contactName"> <p> {{displayName}} </p> </div>
+            {{/isMe}}
+        {{/data.isGuest}}
+        
+        {{^data.isGuest}}
+            {{#isMe}}                
+                <div id="mod_participant_contactName_isme" title="{{displayName}}" class="ui-block-a contactName"> <p> {{displayName}} </p> </div>
+            {{/isMe}}
+        {{/data.isGuest}}
+        
+        {{#data.isGuest}}                           
+            <div id="mod_participant_contactName_isme" title="{{displayName}}" class="ui-block-a contactName"> <p> {{displayName}} </p> </div>
+        {{/data.isGuest}}
+        
+            <!-- if user is mod -->    
+        <div id="mod_participant_controls">
+        {{^data.isGuest}}
+            {{^data.shareOnly}}
+                {{^isMe}}     
+                    <!--if audio is true, show mute audio as tooltip-->
+                    {{#audio}} 
+                        <div id="mod_participant_audio_btn" title="{{MUTE_PARTICIPANT_AUDIO}}" participantID="{{participantID}}" class="ui-block-b audio_status_{{audio}}"/>
+                    {{/audio}}
+                    {{^audio}}
+                        <div id="mod_participant_audio_btn" title="{{UNMUTE_PARTICIPANT_AUDIO}}" participantID="{{participantID}}" class="ui-block-b audio_status_{{audio}}"/>
+                    {{/audio}}
+                    <!--if video is true, show mute video as tooltip-->
+                    {{#video}} 
+                        <div id="mod_participant_video_btn" title="{{MUTE_PARTICIPANT_VIDEO}}" participantID="{{participantID}}" class="ui-block-c video_status_{{video}}"/>
+                    {{/video}}
+                    {{^video}} 
+                        <div id="mod_participant_video_btn" title="{{UNMUTE_PARTICIPANT_VIDEO}}" participantID="{{participantID}}" class="ui-block-c video_status_{{video}}"/>
+                    {{/video}}
+                {{/isMe}}
+            {{/data.shareOnly}}          
+        {{/data.isGuest}}
+        </div>
+    </div>
+{{/data.participants}}
+{{/lang.VidyoClient}}
+   
+  </ul>
+</script>

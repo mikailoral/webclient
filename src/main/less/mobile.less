@@ -1,0 +1,136 @@
+#mainTabletDiv{
+        position: absolute;
+        top:20%;
+        left:10%;	
+        right:10%;
+        bottom:10%; 
+        text-align: center; 
+}
+
+.logoTabletDiv{
+    background :url('../images/logo_genband.png') no-repeat center center;
+    background-size: contain;
+    width: auto;
+    margin: 0px auto;
+    height: 120px;   
+}
+.joinTabletBtn {            
+    background-image:url('../images/mobile_join.png');
+    background-size: 124px 124px;
+    width: 124px;
+    height: 124px;
+    margin: 0px auto;
+    background-repeat: no-repeat;   
+}
+        
+.downloadBtn {            
+    background-image:url('../images/mobile_android_download.png');
+    background-size: 129px 45px;
+    width: 129px;
+    height: 45px;
+    margin: 0px auto;
+    background-repeat: no-repeat;
+    margin-top: 15px;
+}
+
+.downloadIosBtn {            
+    background-image:url('../images/mobile_ios_download.svg');
+    background-size: 129px 45px;
+    width: 129px;
+    height: 45px;
+    margin: 0px auto;
+    background-repeat: no-repeat;
+    margin-top: 15px;
+}
+
+.centerTabletDiv{
+        text-align: center; 
+        margin-top: 15px;  
+        vertical-align:top;
+}
+
+
+.logoNormalDiv{
+    background :url('../images/logo_genband.png') no-repeat center center;
+    background-size: contain;
+    width: auto;
+    margin: 0px auto;
+    height: 80px;
+}
+
+
+.joinNormalBtn {        
+    background-image:url('../images/mobile_join.png');
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+    margin: 0px auto;
+    background-repeat: no-repeat;    
+}
+
+@media all and (orientation:portrait) {
+    #mainNormalDiv{
+        position: absolute;
+        top:8%;
+        left:10%;	
+        right:10%;
+        bottom:10%; 
+        text-align: center; 
+    }
+    
+    .centerNormalDiv{
+        text-align: center; 
+        margin-top: 15px;    
+    }
+    
+    .defaultNormalDiv{
+        text-align: center; 
+        margin-top: 15px;
+    }
+}
+@media all and (orientation:landscape) {
+
+    #mainNormalDiv{
+        position: absolute;
+        top:1%;
+        left:10%;	
+        right:10%;
+        bottom:10%; 
+        text-align: center; 
+    }
+    
+    .centerNormalDiv{
+        text-align: center; 
+        margin-top: 15px;
+        float: left;
+        width: 50%;
+        vertical-align:top;
+    }
+    
+    .defaultNormalDiv{
+        text-align: center; 
+        margin-top: 12px;
+    }
+    
+    .downloadBtn {            
+        background-image:url('../images/mobile_android_download.png');
+        background-size: 129px 45px;
+        width: 129px;
+        height: 45px;
+        margin: 0px auto;
+        background-repeat: no-repeat;
+        margin-top: 20px;
+    }
+
+    .downloadIosBtn {            
+        background-image:url('../images/mobile_ios_download.svg');
+        background-size: 129px 45px;
+        width: 129px;
+        height: 45px;
+        margin: 0px auto;
+        background-repeat: no-repeat;
+        margin-top: 20px;
+    }
+    
+    
+}

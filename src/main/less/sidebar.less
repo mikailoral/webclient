@@ -1,0 +1,370 @@
+#sidebarContent {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 60px;
+    border: 1px solid;
+    border-left: none;
+    padding: 20px;
+    padding-top: 10px;
+    word-wrap: break-word;
+    border-bottom: none;
+    border-top: none;
+    max-width: 257px;
+    #sidebarContent_control label {
+        font-size: 10pt;
+        text-align: left;
+        font-family: arial;
+    }
+    #sidebarContent_controlsub {
+        margin-bottom: 20px;
+        font-size: 10pt;
+        label {
+            font-size: 10pt;
+            font-weight: bolder;
+            text-align: left;
+        }
+        .advanced_settings_label{
+            font-family: arial; 
+            font-size:8pt;   
+            padding-left: 30px;
+            font-weight: normal;
+            padding-top: 4px;
+        }
+        .advanced_settings_checkbox {
+            margin: 0px 0px 0px 0px;
+            width: 15px;
+            height: 15px;
+            margin-top: 3px;       
+        }
+    }
+    .ie9 #sidebarContent_controlsub {
+        font-size: 11px;
+        white-space: nowrap;
+        line-height: 200%;
+        label {
+            font-size: 12px;
+            font-weight: bolder;
+            text-align: left;
+        }
+    }
+}
+#sidebarContent .ui-grid-b {
+    width: 100%;
+    padding: 0px;
+    margin: 0;
+    display: table;
+}
+#sidebarContent .ui-grid-b .ui-block-a {
+    display: inline-block;
+    width: 116px;
+    margin-top: 6px;
+}
+#sidebarContent .ui-grid-b .ui-block-b,
+#sidebarContent .ui-grid-b .ui-block-c,
+#sidebarContent .ui-grid-b .ui-block-d {
+    display: inline-block;
+    height: 30px;
+    width: 25px;
+    margin-top: 5px
+}
+#sidebarContent #mod_participant_controls #mod_participant_video_btn {
+    margin-top: 9px;
+    margin-left: 12px;
+    cursor: pointer;
+}
+#sidebarContent #mod_participant_controls #mod_participant_audio_btn {
+    margin-top: 9px;
+    cursor: pointer;
+}
+#sidebarContent #mod_participant_controls #mod_participant_video_btn.video_status_true {
+    background: url("../images/part-control-video-on.png") no-repeat;
+}
+#sidebarContent #mod_participant_controls #mod_participant_video_btn.video_status_false {
+    background: url("../images/part-control-video-off.png") no-repeat;
+}
+#sidebarContent #mod_participant_controls #mod_participant_audio_btn.audio_status_true {
+    background: url("../images/part-control-audio-on.png") no-repeat;
+}
+#sidebarContent #mod_participant_controls #mod_participant_audio_btn.audio_status_false {
+    background: url("../images/part-control-audio-off.png") no-repeat;
+}
+#sidebarContent #mod_participant_kick_btn {
+    background: url("../images/part_remove_icon.png") no-repeat;
+    display: table-cell;
+    width: 31px;
+    height: 22px;
+    top: 11px;
+    position: relative;
+    left: 4px;
+    cursor: pointer;
+}
+#sidebarContent #inCallParticipantsList {
+    margin-top: 0px;
+    width: auto;
+    padding: 7px;
+    margin-left: -12px;
+    margin-right: -17px;
+    .isme_true {
+        font-family: arial;
+    }
+}
+#sidebarContent .participants_area {
+    height: 40px;
+    padding: 0;
+    padding-left: 5px;
+    .contactName {
+        font-size: 8pt;
+        font-weight: 100;
+        font-family: arial;
+        padding: 5px;
+        height: 31px;
+        padding-top: 6px;
+        max-width: 135px;
+        padding-left: 5px;
+    }
+    display: block;
+    border: 1px solid;
+    margin-bottom: 3px;
+    width: auto;
+    padding-left: 0px;
+}
+#sidebarContent #span_participant_count {
+    font-family: Arial;
+    font-size: 10pt;
+    font-weight: bolder;
+}
+#sidebarContent #mod_participant_controls {
+    display: table-cell;
+    width: 69px;
+    height: auto;
+    position: relative;
+}
+#sidebarContent #mod_participant_contactName p {
+    width: 112px;
+    max-height: 16px;
+    max-width: 112px;
+    margin: 0px;
+    overflow: hidden;
+    font-family: Arial;
+    font-size: 8pt;
+    //necessary for "..." if text is long
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: 100;
+}
+#sidebarContent #mod_participant_contactName_isme p {
+    width: 204px;
+    max-height: 16px;
+    max-width: 204px;
+    margin: 0px;
+    overflow: hidden;
+    font-family: Arial;
+    font-size: 8pt;
+    //necessary for "..." if text is long
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: 100;
+}
+#sidebar_menu #participants_menu a {
+    background: url("../images/participant_icon_normal.png") no-repeat;
+    outline: none;
+    border: none;
+}
+#sidebar_menu #share_menu a {
+    background: url("../images/screenshare_icon_normal.png") no-repeat;
+    outline: none;
+    border: none;
+}
+#sidebar_menu #selfview_menu a {
+    background: url("../images/selfview_off_icon_normal.png") no-repeat;
+    background-position: center center;
+    outline: none;
+    border: none;
+}
+#sidebar_menu #selfview_menu.none a {
+    background: url("../images/selfview_on_icon_normal.png") no-repeat;
+    background-position: center center;
+}
+#sidebar_menu #selfview_menu.cur_menu {
+    cursor: pointer;
+    border-right: none;
+}
+#sidebar_menu #layout_menu a {
+    background: url("../images/layout_preffered.png") no-repeat;
+    background-position: center center;
+    outline: none;
+    border: none;
+}
+#sidebar_menu #layout_menu.active a {
+    background: url("../images/layout_grid.png") no-repeat;
+    background-position: center center;
+}
+#sidebar_menu #layout_menu.cur_menu {
+    cursor: pointer;
+    border-right: none;
+}
+#sidebar_menu #moderator_menu a {
+    background: url("../images/moderator_icon_normal.png") no-repeat;
+    outline: none;
+    border: none;
+}
+#sidebar_menu #settings_menu a {
+    background: url("../images/settings_icon_normal.png") no-repeat;
+    outline: none;
+    border: none;
+}
+#sidebar_menu ul li:hover {
+    cursor: pointer;
+    border-right: none;
+}
+#sidebar_menu {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    position: absolute;
+    width: 60px;
+    top: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    z-index: 10;
+    left: 0;
+    overflow: hidden;
+}
+#sidebar_menu ul,
+#sidebar_menu ul li,
+#sidebar_menu ul ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#sidebar_menu ul {
+    position: relative;
+    z-index: 1;
+    float: left;
+}
+#sidebar_menu ul li {
+    border-radius: 0;
+    border: none;
+    height: 50px;
+    text-align: center;
+    border-bottom: 1px solid;
+}
+#sidebar_menu a {
+    display: block;
+    font-size: 11px;
+    font-weight: normal;
+    height: 12px;
+    line-height: 12px;
+    padding-top: 40px;
+    text-decoration: none;
+    margin-left: -2px;
+}
+#sidebar_menu #participants_menu a {
+    background-position: center center;
+}
+#sidebar_menu #participants_menu.cur_menu {
+    cursor: pointer;
+    border-right: none;
+}
+#sidebar_menu #share_menu a {
+    background-position: center center;
+}
+#sidebar_menu #share_menu.cur_menu {
+    cursor: pointer;
+    border-right: none;
+}
+#sidebar_menu #moderator_menu a {
+    background-position: center center;
+}
+#sidebar_menu #moderator_menu.cur_menu {
+    cursor: pointer;
+    border-right: none;
+}
+#sidebar_menu #share_menu.sharing a {
+    background: url("../images/screenshare_on_share_icon_sharing.png") no-repeat;
+}
+#sidebar_menu #share_menu.sharing a {
+    background-position: center center;
+}
+#sidebar_menu #share_menu.active a {
+    background: url("../images/screenshare_on_icon_normal.png") no-repeat;
+}
+#sidebar_menu #share_menu.active a {
+    background-position: center center;
+}
+#sidebar_menu #share_menu.deactive a {
+    background: url("../images/screenshare_icon_normal.png") no-repeat;
+}
+#sidebar_menu #share_menu.deactive a {
+    background-position: center center;
+}
+#sidebar_menu #settings_menu a {
+    background-position: center center;
+}
+#sidebar_menu #settings_menu.cur_menu {
+    cursor: pointer;
+    border-right: none;
+}
+#sidebar_menu ul {
+    list-style: none;
+    width: inherit;
+    font-weight: bold;
+    position: absolute;
+}
+#sidebar_menu>ul {
+    float: left;
+}
+#sidebar_menu>ul>li>span {
+    border-radius: 0;
+    padding: 0 0 0 2px;
+    border-top: none;
+}
+/* Badge related styles */
+/*NUMBER OF PATICIPANTS IN THE ROOM */
+#sidebar_menu #participant_counter_badge{
+    position: absolute;
+    margin-top: -24px;
+    margin-left: 35px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    font-family: Arial;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;	
+}
+#sidebar_menu #participant_counter{
+    position: relative;
+    top: 4px;
+}
+.ie9 #sidebar_menu #participant_counter{
+    position: relative;
+    top: 4px;
+}
+.ie10 #sidebar_menu #participant_counter{
+    position: relative;
+    top: 4px;
+}
+//ie10 and ie11 specific
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    #sidebar_menu #participant_counter{
+        position: relative;
+        top: 4px;
+    }
+}
+.transparent1{
+    opacity:0.8;
+    filter:alpha(opacity=80); /* For IE8 and earlier */
+}
+/*IE9 only checkbox css*/
+.ie9 #sidebarContent #sidebarContent_controlsub .advanced_settings_label {
+    padding-top: 7px;
+}
+/*IE10 only checkbox css*/
+.ie10 #sidebarContent #sidebarContent_controlsub .advanced_settings_label {
+    padding-top: 7px;
+}

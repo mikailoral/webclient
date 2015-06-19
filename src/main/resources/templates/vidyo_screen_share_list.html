@@ -1,0 +1,175 @@
+<script id="vidyo_screen_share_list" type="text/html">
+{{#lang.VidyoClient}} 
+<div id="vidyo_menu_detail_temp" class="vidyo_drop_menu">
+    <label id="share_window">{{SHARE_WINDOW}}</label>
+    <ul id="share_list" data-role="listview" data-theme="b"> 
+    <label>{{VIEW_LIST_LABEL}}{{#data.viewCount}}{{count}}{{/data.viewCount}}&nbsp;&nbsp;</label>
+    
+        {{#data.isView}}
+                 <li role="presentation" class="stop-viewing show"><a class="clickable_item stop-viewing remote" role="menuitem" tabindex="-1">{{STOP_VIEWING}}</a></li>
+        {{/data.isView}}
+        {{^data.isView}}
+                 <li role="presentation" class="stop-viewing ui-disabled"><a class="clickable_item stop-viewing ui-disabled" role="menuitem" tabindex="-1">{{STOP_VIEWING}}</a></li>
+        {{/data.isView}}
+
+        {{#data.sharing}}
+            {{#highlight}}
+                <li role="presentation" class="highlight" style="margin-top: 8px;"><a class="clickable_item highlight remote" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+            {{^highlight}}
+                <li role="presentation" style="margin-top: 8px;"><a class="clickable_item remote" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+        {{/data.sharing}}
+        
+        
+        <label style="margin-top: 7px;">{{SHARE_LIST_LABEL}}{{#data.shareCount}}{{count}}{{/data.shareCount}}&nbsp;&nbsp;</label>
+        {{#data.isShare}}
+                 <li role="presentation" class="stop-sharing show"><a class="clickable_item stop-sharing" role="menuitem" tabindex="-1">{{STOP_SHARING}}</a></li>
+        {{/data.isShare}}
+        {{^data.isShare}}
+                 <li role="presentation" class="stop-sharing ui-disabled"><a class="clickable_item stop-sharing ui-disabled" role="menuitem" tabindex="-1">{{STOP_SHARING}}</a></li>
+        {{/data.isShare}}                     
+                
+        
+        {{#data.failed}}             
+            <a class="share_list_failed" title="{{SHARE_LIST_FAILED}}">{{SHARE_LIST_FAILED}}</a><br><br>
+            <a class="share_list_failed" title="{{SHARE_LIST_FAILED_DISPLAY}}">{{SHARE_LIST_FAILED_DISPLAY}}</a><br><br><br>
+        {{/data.failed}}
+        
+        {{#data.desktops}}
+            {{#data.failed}} 
+                {{#highlight}}
+                    <li role="presentation" class="highlight" style="list-style-image: url('images/monitor.png'); margin-top: 8px;"><a class="clickable_item highlight" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{DISPLAY}}">{{DISPLAY}}</a></li>
+                {{/highlight}}
+                {{^highlight}}
+                    <li role="presentation" style="list-style-image: url('images/monitor.png'); margin-top: 8px;"><a class="clickable_item" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{DISPLAY}}">{{DISPLAY}}</a></li>
+                {{/highlight}}
+            {{/data.failed}}
+            {{^data.failed}}
+                {{#highlight}}
+                    <li role="presentation" class="highlight" style="list-style-image: url('images/monitor.png'); margin-top: 8px;"><a class="clickable_item highlight" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+                {{/highlight}}
+                {{^highlight}}
+                    <li role="presentation" style="list-style-image: url('images/monitor.png'); margin-top: 8px;"><a class="clickable_item" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+                {{/highlight}}
+            {{/data.failed}}
+        {{/data.desktops}}
+        
+        
+        {{#data.arrayppt}}
+            {{#highlight}}
+                <li role="presentation" class="highlight" style="list-style-image: url('images/powerpoint.png');  margin-top: 8px;"><a class="clickable_item highlight" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+            {{^highlight}}
+                <li role="presentation" style="list-style-image: url('images/powerpoint.png'); margin-top: 8px;"><a class="clickable_item" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+        {{/data.arrayppt}}
+        {{#data.arraypdf}}
+            {{#highlight}}
+                <li role="presentation" class="highlight" style="list-style-image: url('images/pdf.png');  margin-top: 8px;"><a class="clickable_item highlight" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+            {{^highlight}}
+                <li role="presentation" style="list-style-image: url('images/pdf.png'); margin-top: 8px;"><a class="clickable_item" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+        {{/data.arraypdf}}
+        {{#data.arrayxls}}
+            {{#highlight}}
+                <li role="presentation" class="highlight" style="list-style-image: url('images/excel.png'); margin-top: 8px;"><a class="clickable_item highlight" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+            {{^highlight}}
+                <li role="presentation" style="list-style-image: url('images/excel.png'); margin-top: 8px;"><a class="clickable_item" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+        {{/data.arrayxls}}
+        {{#data.arraydoc}}
+            {{#highlight}}
+                <li role="presentation" class="highlight" style="list-style-image: url('images/doc.png'); margin-top: 8px;"><a class="clickable_item highlight" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+            {{^highlight}}
+                <li role="presentation" style="list-style-image: url('images/doc.png'); margin-top: 8px;"><a class="clickable_item" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+        {{/data.arraydoc}}
+        {{#data.arrayoutlook}}
+            {{#highlight}}
+                <li role="presentation" class="highlight" style="list-style-image: url('images/outlook.png'); margin-top: 8px;"><a class="clickable_item highlight" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+            {{^highlight}}
+                <li role="presentation" style="list-style-image: url('images/outlook.png'); margin-top: 8px;"><a class="clickable_item" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+        {{/data.arrayoutlook}}
+        {{#data.arraygenband}}
+            {{#highlight}}
+                <li role="presentation" class="highlight" style="list-style-image: url('images/genband.png'); margin-top: 8px;"><a class="clickable_item highlight" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+            {{^highlight}}
+                <li role="presentation" style="list-style-image: url('images/genband.png'); margin-top: 8px;"><a class="clickable_item" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+        {{/data.arraygenband}}
+        {{#data.arraychrome}}
+            {{#highlight}}
+                <li role="presentation" class="highlight" style="list-style-image: url('images/chrome.png'); margin-top: 8px;"><a class="clickable_item highlight" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+            {{^highlight}}
+                <li role="presentation" style="list-style-image: url('images/chrome.png'); margin-top: 8px;"><a class="clickable_item" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+        {{/data.arraychrome}}
+        {{#data.arrayfirefox}}
+            {{#highlight}}
+                <li role="presentation" class="highlight" style="list-style-image: url('images/firefox.png'); margin-top: 8px;"><a class="clickable_item highlight" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+            {{^highlight}}
+                <li role="presentation" style="list-style-image: url('images/firefox.png'); margin-top: 8px;"><a class="clickable_item" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+        {{/data.arrayfirefox}}
+        {{#data.arrayexplorer}}
+            {{#highlight}}
+                <li role="presentation" class="highlight" style="list-style-image: url('images/explorer.png'); margin-top: 8px;"><a class="clickable_item highlight" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+            {{^highlight}}
+                <li role="presentation" style="list-style-image: url('images/explorer.png'); margin-top: 8px;"><a class="clickable_item" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+        {{/data.arrayexplorer}}
+        {{#data.arraysafari}}
+            {{#highlight}}
+                <li role="presentation" class="highlight" style="list-style-image: url('images/safari.png'); margin-top: 8px;"><a class="clickable_item highlight" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+            {{^highlight}}
+                <li role="presentation" style="list-style-image: url('images/safari.png'); margin-top: 8px;"><a class="clickable_item" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+        {{/data.arraysafari}}
+        
+        {{#data.arrayjpg}}
+            {{#highlight}}
+                <li role="presentation" class="highlight" style=" list-style-image: url('images/images.png'); margin-top: 8px;"><a class="clickable_item highlight" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+            {{^highlight}}
+                <li role="presentation" style=" list-style-image: url('images/images.png'); margin-top: 8px;"><a class="clickable_item" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+        {{/data.arrayjpg}}
+        {{#data.arraytxt}}
+            {{#highlight}}
+                <li role="presentation" class="highlight" style=" list-style-image: url('images/txt.png'); margin-top: 8px;"><a class="clickable_item highlight" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+            {{^highlight}}
+                <li role="presentation" style=" list-style-image: url('images/txt.png'); margin-top: 8px;"><a class="clickable_item" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+        {{/data.arraytxt}}
+        {{#data.arrayfolder}}
+            {{#highlight}}
+                <li role="presentation" class="highlight" style=" list-style-image: url('images/file.png'); margin-top: 8px;"><a class="clickable_item highlight" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+            {{^highlight}}
+                <li role="presentation" style=" list-style-image: url('images/file.png'); margin-top: 8px;"><a class="clickable_item" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+        {{/data.arrayfolder}}
+        {{#data.arrayother}}
+            {{#highlight}}
+                <li role="presentation" class="highlight" style=" list-style-image: url('images/other.png'); margin-top: 8px;"><a class="clickable_item highlight" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+            {{^highlight}}
+                <li role="presentation" style=" list-style-image: url('images/other.png'); margin-top: 8px;"><a class="clickable_item" role="menuitem" data-id="{{id}}" tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/highlight}}
+        {{/data.arrayother}}
+    </ul> 
+</div> 
+{{/lang.VidyoClient}}
+</script>

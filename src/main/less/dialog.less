@@ -1,0 +1,381 @@
+#dialog {
+    text-shadow: none;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    position: fixed;
+    z-index: 220;
+    display: none;
+    .holder {
+        width: 100%;
+        display: block;
+    }
+    .table {
+        height: 100%;
+        width: 330px;
+        display: table;
+        margin: 0px auto;
+        overflow: hidden;
+        font-size: 13px;
+    }
+    .cell {
+        display: table-cell;
+        padding-top: 7px;
+    }
+    .popup {
+        border-radius: 0;
+        padding: 10px;
+        border: 5px solid;
+    }
+    .ui-btn {
+        min-width: 96px;
+    }
+    .alert {
+        display: inline-block;
+        position: relative;
+        top: 5px;
+        width: 26px;
+        height: 22px;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 10px;
+    }
+    #dialog_cancel {
+        border-radius: 0;
+        padding: 5px;
+        text-decoration: blink;
+        cursor: pointer;
+        width: 100px;
+        min-width: 100px;
+        text-shadow: none;
+        margin-left: 10px;
+        height: 1.3em;
+    }
+    #dialog_cancel:hover {
+        opacity: 0.5;
+    }
+    #dialog_download {
+        border-radius: 0;
+        padding: 5px;
+        text-decoration: blink;
+        width: 100px;
+        min-width: 100px;
+        text-shadow: none;
+        margin-left: 10px;
+        height: 1.3em;
+    }
+    #dialog_download:hover {
+        opacity: 0.5;
+    }
+    #title {
+        padding-top: 2px;
+        font-size: 14px;
+    }
+    #dialog_title {
+        display: inline-block;
+        font-family: Verdana, Geneva, sans-serif;
+    }
+    .dialog_div {
+        margin-top: 15px;
+    }
+    .close_div {
+        height: 50px;
+    }
+    #dialog_icon {
+        background: url("../images/alert_y.png") no-repeat;
+    }
+}
+#about_popup {
+    opacity: 1;
+    display: none;
+}
+#about_popup.dialog {
+    text-shadow: none;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    position: fixed;
+    z-index: 10000;
+    display: none;
+    .table {
+        height: 100%;
+        width: 470px;
+        display: table;
+        margin: 0px auto;
+        overflow: hidden;
+        font-size: 13px;
+    }
+    .cell {
+        display: table-cell;
+        padding-top: 7px;
+        vertical-align: middle;
+    }
+    .popup {
+        border: 1px solid;
+        height: 296px;
+        width: 476px;
+        padding-bottom: 0;
+        padding-top: 0;
+        position: relative;
+        padding: 10px;
+        background: url("../images/aboutBackground.png") no-repeat;
+    }
+    #dialog_close {
+        position: absolute;
+        bottom: 7px;
+        right: 25px;
+        border: 1px solid;
+        padding: 2px;
+        padding-left: 25px;
+        padding-right: 25px;
+        border-radius: 6px;
+        font-family: "Arial";
+        text-shadow: none;
+        font-weight: normal;
+    }
+    #dialog_close:hover {
+        cursor: pointer;
+        opacity: 0.3;
+    }
+    .title {
+        font-size: 22px;
+        margin-top: 35px;
+        margin-left: 17px;
+        margin-bottom: 42px;
+    }
+    .version_value {
+        display: inline;
+        font-size: 11px;
+        margin-left: 10px;
+    }
+    .client_version {
+        font-size: 11px;
+        margin-left: 0;
+        font-weight: bold;
+        text-shadow: none;
+        font-family: "Arial";
+        display: inline;
+    }
+    .plugin_version {
+        font-size: 11px;
+        margin-left: 0;
+        font-weight: bold;
+        text-shadow: none;
+        font-family: "Arial";
+        display: inline;
+    }
+    .text {
+        font-size: 11px;
+        max-width: 356px;
+        opacity: 0.7;
+        margin-left: 0;
+        font-weight: normal;
+        text-shadow: none;
+        font-family: "Arial";
+    }
+}
+#table_popup {
+    box-shadow: rgba(0, 0, 0, 0.0980392) 0px 20px 4px;
+    border: 1px solid;
+    width: 600px;
+    max-width: 600px;
+    max-height: 75px;
+    height: 75px;
+    .alert {
+        max-width: 580px;
+        width: 580px;
+        max-height: 52px;
+    }
+    .close_x {
+        padding-bottom: 40px;
+        padding-right: 4px;
+    }
+    :hover {
+        cursor: pointer;
+    }
+}
+
+#table_popup_from_left {
+    box-shadow: rgba(0, 0, 0, 0.0980392) 0px 20px 4px;
+    border: 1px solid;
+    width: 288px;
+    height: 105px;
+    max-width: 288px;
+    .alert {
+        max-width: 288px;
+        width: 288px;
+        max-height: 52px;
+    }
+    .close_x {
+        padding-bottom: 63px;
+        padding-right: 9px;
+    }
+    :hover {
+        cursor: pointer;
+    }
+}
+#table_popup_from_bottom_right {
+    box-shadow: rgba(0, 0, 0, 0.0980392) 0px 20px 4px;
+    border: 1px solid;
+    width: 400px;
+    max-width: 400px;
+    max-height: 75px;
+    height: 75px;
+    .alert {
+        max-width: 580px;
+        width: 580px;
+        max-height: 52px;
+    }    
+    .close_x {
+        padding-bottom: 40px;
+        padding-right: 4px;
+    }
+    :hover {
+        cursor: pointer;
+    }
+}
+#table_popup_audio_video {
+    box-shadow: rgba(0, 0, 0, 0.0980392) 0px 20px 4px;
+    border: 1px solid;
+    width: 600px;
+    max-width: 600px;
+    max-height: 75px;
+    height: 75px;
+    .alert {
+        max-width: 580px;
+        width: 580px;
+        max-height: 52px;
+    }
+    .close_x {
+        padding-bottom: 40px;
+        padding-right: 4px;
+    }
+    :hover {
+        cursor: pointer;
+    }
+}
+#table_popup_btn_from_left {
+    padding-top: 13px;
+    padding-left: 80px;
+}
+#table_popup_btn {
+    margin-left: 213px;
+    margin-top: 7px;
+}
+#table_popup_btn_audiovideo {
+    margin-left: 172px;
+    margin-top: 7px;
+}
+#popupBtnAudioVideoOn {
+    height: 27px;
+    width: 47px;
+    padding-top: 6px;
+    padding-left: 6px;
+    padding-right: 4px;
+    display: block;
+    max-width: 140px;
+    border: 1px solid;
+}
+#popupBtnAudioOnVideoOff {
+    height: 27px;
+    width: 47px;
+    padding-top: 6px;
+    padding-left: 6px;
+    padding-right: 4px;
+    display: block;
+    border: 1px solid;
+    //this is the center object.alignment-adjust.
+    //defines the sspaces btw the 3 objs.
+    margin-left: 15px;
+    margin-right: 15px;
+}
+#popupBtnAudioOffVideoOff {
+    height: 27px;
+    width: 47px;
+    padding-top: 6px;
+    padding-left: 6px;
+    padding-right: 4px;
+    display: block;
+    border: 1px solid;
+}
+#popupBtnAudioVideoOn1 {
+    width: 22px;
+    height: 22px;
+    float: left;
+    display: block;
+    background: url("../images/Mic_icon_normal.png") no-repeat;
+}
+#popupBtnAudioOnVideoOff1 {
+    width: 22px;
+    height: 22px;
+    float: left;
+    display: block;
+    background: url("../images/Mic_icon_normal.png") no-repeat;
+}
+#popupBtnAudioOffVideoOff1 {
+    width: 22px;
+    height: 22px;
+    float: left;
+    display: block;  
+    background: url("../images/Mute_icon.png") no-repeat;  
+}
+#popupBtnAudioVideoOn2 {
+    height: 22px;
+    width: 22px;
+    float: right;
+    display: block;
+    background: url("../images/Camera_icon_normal.png") no-repeat;
+}
+#popupBtnAudioOnVideoOff2 {
+    width: 22px;
+    height: 22px;
+    float: right;
+    display: block;
+    background: url("../images/Camera_off_icon.png") no-repeat;
+}
+#popupBtnAudioOffVideoOff2 {
+    width: 22px;
+    height: 22px;
+    float: right;
+    display: block;
+    max-width: 140px;
+    background: url("../images/Camera_off_icon.png") no-repeat;
+}
+#popupBtnYes {
+    display: block;
+    max-width: 60px;
+    border: 1px solid;
+    font-size: 8pt;
+    font-family: Arial;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    width: 60px;
+}
+#popupBtnNo {
+    display: block;
+    max-width: 60px;
+    border: 1px solid;
+    font-size: 8pt;
+    font-family: Arial;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    width: 60px;
+}
+#popupBtnYes_from_left {
+    display: block;
+    max-width: 60px;
+    border: 1px solid;
+    font-size: 8pt;
+    font-family: Arial;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    width: 60px;
+}
+#popupBtnNo_from_left {
+    display: block;
+    max-width: 60px;
+    border: 1px solid;
+    font-size: 8pt;
+    font-family: Arial;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    width: 60px;
+}

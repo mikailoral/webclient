@@ -1,0 +1,79 @@
+<script id="login_devicelist_template" type="text/html">
+
+    {{#lang.VidyoClient}}
+    {{^data.shareOnly}}
+    <div id="sidebarContent_control" class ="class='ui-field-contain' style='clear:left;'">
+        <label style="font-size:10pt; font-weight: bolder; text-align: left; margin-top: 25px; margin-bottom: 20px;">{{DEVICE_SETTINGS}}</label>
+        <div id="sidebarContent_controlsub">
+            <label for="camera" style="font-family: arial; font-size:8pt; font-weight: 100; text-align: left;margin-top: 16px; margin-bottom: -12px;">{{CAMERA}}</label>
+            </br>
+            <select name="Camera" id="camera">
+                {{#data.deviceCamera}}    
+                {{#isSelected}}
+                <option value={{id}} title="{{name}}" selected>{{name}}</option>
+                {{/isSelected}}
+                {{^isSelected}}
+                <option value={{id}} title="{{name}}">{{name}}</option>
+                {{/isSelected}}
+                {{/data.deviceCamera}}     
+                {{^data.deviceCamera}} 
+                <option value={{id}} title="{{NONE}}" selected>{{NONE}}</option>
+                {{/data.deviceCamera}} 
+            </select>
+            </br>
+            <label for="speaker" style="font-family: arial; font-size:8pt; font-weight: 100; text-align: left; margin-top: 16px;margin-bottom: -11px;">{{SPEAKER}}</label>
+            </br>
+            <select name="Speaker" id="speaker">
+                {{#data.deviceSpeaker}}    
+                {{#isSelected}}
+                <option value={{id}} title="{{name}}" selected>{{name}}</option>
+                {{/isSelected}}
+                {{^isSelected}}
+                <option value={{id}} title="{{name}}">{{name}}</option>
+                {{/isSelected}}
+                {{/data.deviceSpeaker}}     
+                {{^data.deviceSpeaker}} 
+                <option value={{id}} title="{{NONE}}" selected>{{NONE}}</option>
+                {{/data.deviceSpeaker}} 
+            </select>
+            </br>
+            <label for="Microphone" style="font-family: arial; font-size:8pt; font-weight: 100; text-align: left; margin-top: 16px;margin-bottom: -11px;">{{MICROPHONE}}</label>
+            </br>     
+            <select name="Microphone" id="microphone">
+                {{#data.deviceMicrophone}}    
+                {{#isSelected}}
+                <option value={{id}} title="{{name}}" selected>{{name}}</option>
+                {{/isSelected}}
+                {{^isSelected}}
+                <option value={{id}} title="{{name}}">{{name}}</option>
+                {{/isSelected}}   
+                {{/data.deviceMicrophone}}     
+                {{^data.deviceMicrophone}} 
+                <option value={{id}} title="{{NONE}}" selected>{{NONE}}</option>
+                {{/data.deviceMicrophone}} 
+            </select>
+            <div class="device_list_advanced_settings">
+                <div class="mic_setting">
+                    {{#data.enableEchoCancellation}}  
+                    <input type="checkbox" name="mic_advanced-1" id="echo_cancellation" class="advanced_settings_checkbox" checked/>
+                    {{/data.enableEchoCancellation}}
+                    {{^data.enableEchoCancellation}}  
+                    <input type="checkbox" name="mic_advanced-1" id="echo_cancellation" class="advanced_settings_checkbox"/>
+                    {{/data.enableEchoCancellation}}
+                    <label class="advanced_settings_label">{{ECHO_CANCELLATION_LABEL}}</label>
+                </div>
+                <div class="mic_setting">
+                    {{#data.enableAudioAGC}}  
+                    <input type="checkbox" name="mic_advanced-2" id="audio_AGC" class="advanced_settings_checkbox" checked/>
+                    {{/data.enableAudioAGC}}  
+                    {{^data.enableAudioAGC}}  
+                    <input type="checkbox" name="mic_advanced-2" id="audio_AGC" class="advanced_settings_checkbox"/>
+                    {{/data.enableAudioAGC}}  
+                    <label class="advanced_settings_label">{{AUDIO_AGC_LABEL}}</label>
+                </div>       
+            </div>       
+        </div> 
+    </div>       
+    {{/data.shareOnly}}
+    {{/lang.VidyoClient}}  
+</script>

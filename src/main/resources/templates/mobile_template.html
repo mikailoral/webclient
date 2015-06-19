@@ -1,0 +1,57 @@
+<script id="mobile_template" type="text/html">
+    {{#lang.VidyoClient}}
+                
+        {{#data.isTablet}}
+        <div id="mainTabletDiv">
+            
+            <div  class="logoTabletDiv" ></div>            
+            <div style="text-align:center;  margin-top:40px;" >{{HAVE_VIDYOMOBILE_INSTALLED}} </div>
+  
+            <div id="join-btn" class='centerTabletDiv'>                
+                <div id="join-btn" class="joinTabletBtn" ></div> 
+                <div style="text-align: center; vertical-align:top;">{{JOIN_CONFERENCE}}</div>
+            </div>
+
+            <div id="download-btn" class='centerTabletDiv'  >  
+                <div class='centerTabletDiv'>{{DONT_HAVE_VIDYOMOBILE}}</div>
+                {{#data.isAndroid}}
+                <div  class="downloadBtn" ></div> 
+                {{/data.isAndroid}}
+                {{#data.isIos}}
+                <div  class="downloadIosBtn" ></div> 
+                {{/data.isIos}}
+
+            </div>  
+        </div>
+        {{/data.isTablet}}
+        {{^data.isTablet}}
+        <div id="mainNormalDiv">
+            <div class='defaultNormalDiv'>            
+                <div  class="logoNormalDiv" ></div> 
+            </div>
+
+            <div class='defaultNormalDiv'>{{HAVE_VIDYOMOBILE_INSTALLED}} </div>
+            <div>
+                <div id="join-btn" class='centerNormalDiv'>
+                    <div class='defaultNormalDiv'>{{JOIN_CONFERENCE}}</div>
+                    <div id="join-btn" class="joinNormalBtn" ></div>                     
+                </div>
+
+
+                <div id="download-btn" class='centerNormalDiv'>     
+                    <div class='defaultNormalDiv'>{{DONT_HAVE_VIDYOMOBILE}}</div> 
+                    {{#data.isAndroid}}
+                    <div id="download-btn" class="downloadBtn" ></div> 
+                    {{/data.isAndroid}}
+                    {{#data.isIos}}
+                    <div id="download-btn" class="downloadIosBtn" ></div> 
+                    {{/data.isIos}}
+                </div> 
+            </div>
+            
+        </div>
+        {{/data.isTablet}}
+     
+
+    {{/lang.VidyoClient}}
+</script>

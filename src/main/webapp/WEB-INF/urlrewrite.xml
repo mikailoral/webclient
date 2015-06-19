@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN"
+        "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
+
+<!--
+
+    Configuration file for UrlRewriteFilter
+    http://www.tuckey.org/urlrewrite/
+
+-->
+<urlrewrite>    
+    <rule>
+        <from>/(\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{1,20}\b).debug.html</from>
+        <to>/debug.html</to>
+    </rule>
+    
+    <rule>
+        <from>/(\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{1,20}\b)</from>
+        <to>/minified.html</to>
+    </rule>
+
+    
+</urlrewrite>
+
+
+

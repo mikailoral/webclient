@@ -1,0 +1,45 @@
+<script id="dialog_tmpl" type="text/html">
+   {{#lang.VidyoClient}}
+    <div id="dialog" class="holder">
+        <div class="table">
+            <div class="cell">
+                <div id="popup" class="popup">
+                    <div class="content">
+                        <div id="title" align="center">
+                            <span id="dialog_icon"></span>
+                            <span id="dialog_title"></span>
+                        </div>
+                        <div id="dialog_div" align="center">
+                            <span id="dialog_message">{{A_LOGIN_ERROR}}</span>
+                        </div>
+                    </div>
+
+                    <div class="dialog_div" align="center">
+                        <div id="macosx-browser-version" class="macosx ui-collapsible ui-collapsible-inset ui-collapsible-themed-content ui-first-child ui-collapsible-collapsed">
+                            <input id="plugindownload_browser_version" type="checkbox" name="host" /> <span class="browser-version">{{BROWSER_VERSION}}</span>
+                        </div>
+                        <a id="dialog_download" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-inline ui-btn-up-a"  data-role="button" style="display:none;" data-inline="true">{{DOWNLOAD}}</a>
+                        <div id="dialog_cancel" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-inline ui-btn-up-a" align="center" data-role="button" style="display: none;" data-inline="true">
+                            <span>{{CANCEL}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    
+    <div id="about_popup" class="dialog">
+            <div class="table">
+                <div class="cell">
+                    <div class="popup">
+                        <p class="title">{{ABOUT_TITLE}}</p>
+                        <p class="client_version">{{CLIENT_VERSION}}<p class="version_value">{{data.buildVersion}}</p></p>
+                        <p class="plugin_version">{{PLUGIN_VERSION}}<p class="version_value">{{data.pluginVersion}}</p></p>
+                        <p class="text">{{COPYRIGHT_TEXT}}</p>
+                        <a id="dialog_close" data-role="button" data-inline="true">{{CLOSE}}</a>
+                    </div>
+                </div>
+            </div>  
+    </div> 
+    {{/lang.VidyoClient}}
+</script>
